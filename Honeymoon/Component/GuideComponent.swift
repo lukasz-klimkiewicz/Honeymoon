@@ -22,7 +22,7 @@ struct GuideComponent: View {
     var body: some View {
        
         
-        HStack(alignment: .center, spacing: 20){
+        HStack(){
             
             Image(systemName: icon)
                 .font(.largeTitle)
@@ -35,6 +35,7 @@ struct GuideComponent: View {
                     Text(title.uppercased())
                         .font(.title)
                         .fontWeight(.heavy)
+                        .foregroundColor(Color.black)
                     
                     Spacer()
                     
@@ -51,6 +52,7 @@ struct GuideComponent: View {
                     .font(.footnote)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
+                    .foregroundColor(.secondary)
                 
                 
             }
