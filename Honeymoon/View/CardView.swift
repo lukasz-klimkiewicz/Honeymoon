@@ -26,6 +26,7 @@ struct CardView: View {
             .frame(minWidth: 0, maxWidth: .infinity)
             .overlay(
                 VStack(alignment: .center, spacing: 12, content: {
+                   
                     Text(honeymoon.place.uppercased())
                         .foregroundColor(Color.white)
                         .font(.largeTitle)
@@ -41,8 +42,18 @@ struct CardView: View {
                             alignment: .bottom
                             
                         )
+                    
                     Text(honeymoon.country.uppercased())
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color.black)
+                        .fontWeight(.bold)
+                        .font(.footnote)
+                        .frame(minWidth: 85)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
+                        .background(
+                            Capsule()
+                                .fill(Color.white)
+                        )
                     
                 })
                 
